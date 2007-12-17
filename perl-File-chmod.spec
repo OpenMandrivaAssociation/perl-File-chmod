@@ -15,7 +15,6 @@ Source:         http://www.cpan.org/modules/by-module/File/%{module}-%{version}.
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 File::chmod is a utility that allows you to bypass system calls or bit
