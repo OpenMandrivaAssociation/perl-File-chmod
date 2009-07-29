@@ -1,21 +1,21 @@
-%define	module	File-chmod
-%define name	perl-%{module}
-%define	version	0.32
-%define	release	%mkrel 3
+%define	upstream_name	 File-chmod
+%define	upstream_version 0.32
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Implements symbolic and ls chmod modes  
+License:	GPL+ or Artistic
 Group:		Development/Perl
-License:	GPL or Artistic
-Url:		http://search.cpan.org/dist/%{module}/
-Source:         http://www.cpan.org/modules/by-module/File/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/File/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 File::chmod is a utility that allows you to bypass system calls or bit
@@ -25,7 +25,7 @@ below). If you wish not to overload chmod(), you can export symchmod() and
 lschmod(), which take, respectively, a symbolic mode and an "ls" mode.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -46,4 +46,3 @@ rm -rf %{buildroot}
 %doc Changes
 %{_mandir}/man3*/*
 %{perl_vendorlib}/File
-
