@@ -1,15 +1,15 @@
 %define	upstream_name	 File-chmod
-%define	upstream_version 0.32
+%define upstream_version 0.39
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	Implements symbolic and ls chmod modes  
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/File/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/File/File-chmod-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -63,3 +63,4 @@ make test
 
 * Thu Aug 16 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.32-1mdv2008.0
 - first mdv release
+

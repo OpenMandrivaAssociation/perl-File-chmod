@@ -1,2 +1,4 @@
+removed_sources:
+  File-chmod-0.32.tar.gz: fd4d6b0d14ac484fe8060c3db604ad0b067e8ac2
 sources:
-  "File-chmod-0.32.tar.gz": fd4d6b0d14ac484fe8060c3db604ad0b067e8ac2
+  File-chmod-0.39.tar.gz: 3bdd518175dbd295a7e87bff7b1ceb9aeeceff2d
