@@ -1,5 +1,5 @@
 %define	upstream_name	 File-chmod
-%define upstream_version 0.39
+%define upstream_version 0.40
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -63,4 +63,5 @@ make test
 
 * Thu Aug 16 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.32-1mdv2008.0
 - first mdv release
+
 
