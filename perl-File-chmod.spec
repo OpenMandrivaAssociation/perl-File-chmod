@@ -1,15 +1,13 @@
 %define	upstream_name	 File-chmod
-%define upstream_version 0.42
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.42
+Release:	2
 
 Summary:	Implements symbolic and ls chmod modes  
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/xenoterracide/file-chmod
-Source0:	https://cpan.metacpan.org/authors/id/X/XE/XENO/File-chmod-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/X/XE/XENO/File-chmod-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ below). If you wish not to overload chmod(), you can export symchmod() and
 lschmod(), which take, respectively, a symbolic mode and an "ls" mode.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -44,9 +42,7 @@ make test
 %changelog
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.320.0-1mdv2010.0
 + Revision: 403167
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.32-3mdv2009.0
+- rebuild using %0.42 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.32-3mdv2009.0
 + Revision: 256875
 - rebuild
 
